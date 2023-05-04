@@ -38,15 +38,13 @@ def first_pred(sample):
     if st.button("False"):
         st.error("FAUX", icon="🚨")
 
-if 'stat' not in st.session_state:
-    st.session_state.stat = []
-if 'count' not in st.session_state:
-    st.session_state.count = 0
 
-
-import matplotlib.pyplot as plt
 
 def draw():
+    if 'stat' not in st.session_state:
+        st.session_state.stat = []
+    if 'count' not in st.session_state:
+        st.session_state.count = 0
     SIZE = 400
     col1, col2, col3 = st.columns(3)
 
